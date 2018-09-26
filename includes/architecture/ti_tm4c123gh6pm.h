@@ -1,5 +1,5 @@
 /**************************************************************************//**
- * @file     ti_tm4c123gh6pm.h
+ * @file      ti_tm4c123gh6pm.h
  * @brief    MCU: Texas Instruments' TM4C123GH6PM
  * @date     July/2018
  * @author   Artur Rodrigues
