@@ -61,6 +61,22 @@ typedef char char_t;
 typedef uint8_t bool_t;
 
 
+typedef uint16_t res_t; ///< Type used for return codes
+
+#define RES_CODE_BASE_SYS   ( EXIT_SUCCESS )   ///< Default return code
+#define RES_SUCCESS         ( EXIT_SUCCESS )   ///< Success return code
+#define RES_ERROR               ( EXIT_FAILURE )   ///< Error return code
+#define RES_ERR_NO_MORE_RECORDS ( RES_ERROR + 1 )   ///< Error: There's no more records
+#define RES_ERR_FORMAT          ( RES_ERROR + 2 )   ///< Error: Data format incorrect
+#define RES_ERR_SZ              ( RES_ERROR + 3 )   ///< Error: Data size incorrect
+#define RES_ERR_OVERFLOW        ( RES_ERROR + 4 )   ///< Error: overflowed
+#define RES_ERR_BUSY            ( RES_ERROR + 5 )   ///< Error: busy
+#define RES_ERR_NOT_IMPLEMENTED ( RES_ERROR + 6 )   ///< Error: not implemented
+
+
+#define RES_CODE_BASE_OTHER    ( 2000 )    ///< Error code base for other modules
+
+
 /**
  * @}
  */
