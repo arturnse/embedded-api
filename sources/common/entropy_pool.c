@@ -49,7 +49,7 @@ uint32_t EntropyPool_Store32(entropy_pool_t *pPool, uint32_t pWord, uint8_t pBit
         return 0;
     }
 
-    pBits %= (sizeof(pWord)*8);   //máximo é 32 bits
+    pBits %= (sizeof(pWord)*8);   //maximo e 32 bits
     entropy = (uint8_t)pBits;
 
     while( pBits-- )
@@ -170,11 +170,11 @@ uint32_t EntropyPool_RdMany(entropy_pool_t *pPool, void *pBuff, uint32_t pSz)
 
     result = pSz = MIN( pSz, EntropyPool_Used(pPool) );
 
-    //segmenta em duas partes: até o final do buffer e então do início até o meio.
+    //segmenta em duas partes: ate o final do buffer e então do início ate o meio.
     // assim: h = head t = tail
     //
-    //  |=====t---------------------h=======| pega o tail até o final
-    //  |h====t-----------------------------| pega o início até o head
+    //  |=====t---------------------h=======| pega o tail ate o final
+    //  |h====t-----------------------------| pega o início ate o head
     //  |----ht-----------------------------|
 
     if( pPool->buff.head + (1 * pSz) > pPool->buff.sz )
@@ -191,7 +191,7 @@ uint32_t EntropyPool_RdMany(entropy_pool_t *pPool, void *pBuff, uint32_t pSz)
 
         pBuff = &(((uint8_t*)pBuff)[cpSz]);
 
-        //número de elementos retirados:
+        //numero de elementos retirados:
         pSz -= (cpSz/1);
     }
 

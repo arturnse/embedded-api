@@ -77,7 +77,7 @@ uint32_t RingBuff_WrOne(ringbuff_t *pRb, void * const pEl, bool_t pOw );
  *
  * @return number of elements inserted
  */
-//FIXME está chamando várias vezes a função de escrever um só! corrigir!
+//FIXME esta chamando varias vezes a função de escrever um só! corrigir!
 uint32_t RingBuff_WrMany(ringbuff_t *pRb, const void * const pWrBuff, uint32_t pN, bool_t pOw );
 
 /**

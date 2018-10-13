@@ -124,7 +124,7 @@ uint32_t RingBuff_WrMany2(ringbuff_t *pRb, const void *pWrBuff, uint32_t pN, boo
 
     if( !pOw )
     {
-        //não adiciona além da conta
+        //não adiciona alem da conta
         pN = MIN( RingBuff_Free(pRb), pN );
     }
 
@@ -235,11 +235,11 @@ uint32_t RingBuff_RdMany(ringbuff_t *pRb, void *pRdBuff, uint32_t pN)
 
     result = pN = MIN( pN, RingBuff_Used(pRb) );
 
-    //segmenta em duas partes: até o final do buffer e então do início até o meio.
+    //segmenta em duas partes: ate o final do buffer e então do início ate o meio.
     // assim: h = head t = tail
     //
-    //  |=====t---------------------h=======| pega o tail até o final
-    //  |h====t-----------------------------| pega o início até o head
+    //  |=====t---------------------h=======| pega o tail ate o final
+    //  |h====t-----------------------------| pega o início ate o head
     //  |----ht-----------------------------|
 
     if( pRb->head + (pRb->eSz * pN) > pRb->sz )
@@ -256,7 +256,7 @@ uint32_t RingBuff_RdMany(ringbuff_t *pRb, void *pRdBuff, uint32_t pN)
 
         pRdBuff = &(((uint8_t*)pRdBuff)[cpSz]);
 
-        //número de elementos retirados:
+        //numero de elementos retirados:
         pN -= (cpSz/pRb->eSz);
     }
 
